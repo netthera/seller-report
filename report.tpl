@@ -3,7 +3,7 @@
 <h3>Running Auctions</h3>
 <table>
 	<tr>
-	<th>Title</th><th>Status</th><th>Promoted</th><th>Views</th><th>Bids</th><th>Current Bid</th><th>Reserve</th><th>Fees</th><th>Income</th><th>Ends</th>
+	<th>Title</th><th>Status</th><th>Promoted</th><th>Views</th><th>Bids</th><th>Current Bid</th><th>Reserve</th><th>Fees</th><th>Profit/Loss</th><th>Ends</th>
 	</tr>
 	<!-- BEGIN open -->
 	<tr {open.BGCOLOUR}>
@@ -18,7 +18,7 @@
 <h3>Closed Auctions</h3>
 <table>
 	<tr>
-	<th>Title</th><th>Status</th><th>Promoted</th><th>Views</th><th>Bids</th><th>Current Bid</th><th>Reserve</th><th>Fees</th><th>Income</th><th>Ended</th>
+	<th>Title</th><th>Status</th><th>Promoted</th><th>Views</th><th>Bids</th><th>Current Bid</th><th>Reserve</th><th>Fees</th><th>Profit/Loss</th><th>Ended</th>
 	</tr>
 	<!-- BEGIN closed -->
 	<tr {closed.BGCOLOUR}>
