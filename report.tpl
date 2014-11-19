@@ -11,7 +11,7 @@
 	</tr>
 	<!-- END open -->
 	<tr>
-		<td>Total</td><td>&nbsp;</td><td>&nbsp;</td><td>{OPEN_TOTAL_VIEWS}</td><td>{OPEN_TOTAL_BIDS}</td><td>&nbsp;</td><td>&nbsp;</td><td>{OPEN_TOTAL_FEES}</td><td>{OPEN_TOTAL_INCOME}</td><td>&nbsp;</td>
+		<td>Totals</td><td>&nbsp;</td><td>&nbsp;</td><td>{OPEN_TOTAL_VIEWS}</td><td>{OPEN_TOTAL_BIDS}</td><td>&nbsp;</td><td>&nbsp;</td><td>{OPEN_TOTAL_FEES}</td><td>{OPEN_TOTAL_INCOME}</td><td>&nbsp;</td>
 	</tr>
 </table>
 <br><br>
@@ -26,6 +26,6 @@
 	</tr>
 	<!-- END closed -->
 	<tr>
-		<td>Total</td><td>&nbsp;</td><td>&nbsp;</td><td>{CLOSED_TOTAL_VIEWS}</td><td>{CLOSED_TOTAL_BIDS}</td><td>&nbsp;</td><td>&nbsp;</td><td>{CLOSED_TOTAL_FEES}</td><td>{CLOSED_TOTAL_INCOME}</td><td>&nbsp;</td>
+		<td>Totals</td><td>&nbsp;</td><td>&nbsp;</td><td>{CLOSED_TOTAL_VIEWS}</td><td>{CLOSED_TOTAL_BIDS}</td><td>&nbsp;</td><td>&nbsp;</td><td>{CLOSED_TOTAL_FEES}</td><td>{CLOSED_TOTAL_INCOME}</td><td>&nbsp;</td>
 	</tr>
 </table>
