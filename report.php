@@ -36,9 +36,13 @@ if (!$user->is_logged_in())
     //current_bid-$fees
     //for now comment accordingly the 3 lines bellow
      
+    if ($user_auctions_feed['reserve_price'] <= $user_auctions_feed['current_bid'] )
     //$income = $user_auctions_feed['current_bid'] - $user_auctions_feed['reserve_price'] - $fees['total'];
     //$income = $user_auctions_feed['current_bid'] - $user_auctions_feed['minimum_bid'] - $fees['total'];
-    $income = $user_auctions_feed['current_bid'] - $fees_total;
+    	$income = $user_auctions_feed['current_bid'] - $fees_total;
+    else
+    	$income = 0 - $fees_total;
+
     
     $rsrv_bgcolor = ($user_auctions_feed['reserve_price'] >= $user_auctions_feed['current_bid'] )?'bgcolor=lightgreen':'bgcolor=red';
 		$pofitloss_bgcolor = ($income >= 0 )?'bgcolor=lightgreen':'bgcolor=#F55';
