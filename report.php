@@ -44,7 +44,7 @@ if (!$user->is_logged_in())
     	$income = 0 - $fees_total;
 
     
-    $rsrv_bgcolor = ($user_auctions_feed['reserve_price'] >= $user_auctions_feed['current_bid'] )?'bgcolor=lightgreen':'bgcolor=red';
+    $rsrv_bgcolor = ($user_auctions_feed['reserve_price'] <= $user_auctions_feed['current_bid'] )?'bgcolor=lightgreen':'bgcolor=red';
 		$pofitloss_bgcolor = ($income >= 0 )?'bgcolor=lightgreen':'bgcolor=#F55';
 
     if ($user_auctions_feed['closed']){   //add data to the closed array
