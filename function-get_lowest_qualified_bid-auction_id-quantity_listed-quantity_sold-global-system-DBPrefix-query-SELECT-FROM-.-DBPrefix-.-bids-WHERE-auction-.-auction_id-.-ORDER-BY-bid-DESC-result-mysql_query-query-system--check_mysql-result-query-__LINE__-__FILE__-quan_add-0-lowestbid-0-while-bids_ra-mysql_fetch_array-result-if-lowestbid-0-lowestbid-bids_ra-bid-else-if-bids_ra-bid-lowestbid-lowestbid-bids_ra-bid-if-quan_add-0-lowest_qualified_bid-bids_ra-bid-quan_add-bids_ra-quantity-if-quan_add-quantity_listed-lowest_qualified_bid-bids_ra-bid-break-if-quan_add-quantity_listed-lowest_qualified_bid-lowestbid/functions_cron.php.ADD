@@ -1,0 +1,37 @@
+//add the following function to your 
+
+function get_lowest_qualified_bid($auction_id ,$quantity_listed,$quantity_sold)
+{
+	global $system, $DBPrefix;
+
+	$query = "SELECT * FROM " . $DBPrefix . "bids WHERE auction = " . $auction_id . " ORDER BY bid DESC";
+	$result= mysql_query($query);
+	$system->check_mysql($result, $query, __LINE__, __FILE__);
+	$quan_add = 0;
+	$lowestbid = 0;
+	while ($bids_ra = mysql_fetch_array($result))
+	{
+		if($lowestbid == 0)
+			$lowestbid=$bids_ra['bid'];
+		else if ($bids_ra['bid'] < $lowestbid)
+			$lowestbid=$bids_ra['bid'];
+		
+		if($quan_add == 0)
+			$lowest_qualified_bid =$bids_ra['bid'];	
+		
+		$quan_add += $bids_ra['quantity'];
+		if ($quan_add >= $quantity_listed){
+			$lowest_qualified_bid =$bids_ra['bid'];
+			break;
+		}
+		
+	}
+	if ($quan_add < $quantity_listed)
+		$lowest_qualified_bid = $lowestbid;
+
+	//echo '--LQB--'.$lowest_qualified_bid =$bids_ra['bid'];
+if($quantity_sold)
+ return  array( 'quantity_sold' => $quan_add, 'lowest_qualified_bid' =>$lowest_qualified_bid);
+else
+	return $lowest_qualified_bid;
+}
