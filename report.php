@@ -163,7 +163,7 @@ function prepair_report($user_id,$output){
 }
 
 if (isset ($_REQUEST['id'])){
-
+	echo 'Your Profit/Loss Report';
 	$user_id = $_REQUEST['id'];
 	prepair_report($user_id,'email');
 	$template->set_filenames(array(
