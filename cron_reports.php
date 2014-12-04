@@ -37,7 +37,7 @@ $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 		$res2 = mysql_query($query);
 		$system->check_mysql($res2, $query, __LINE__, __FILE__);
 		$to = mysql_result($res2, 0);
-    $msg =  file_get_contents('http://www.agrobids.com/report.php?id='.$user_id);
+    $msg =  file_get_contents($main_path .'report.php?id='.$user_id);
     
     mail($to, $subject, $msg, $headers); 
     
@@ -46,11 +46,11 @@ $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
 }
 
-
+//Get day of the week
 // if (isset ($_SERVER['SHELL']) && $_SERVER['USER']=='agrobids'){  
 // 	send_reports();
 //}
 
  send_reports(); 
- 
+
 ?>
