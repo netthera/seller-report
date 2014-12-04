@@ -167,7 +167,7 @@ if (isset ($_REQUEST['id'])){
 	$user_id = $_REQUEST['id'];
 	prepair_report($user_id,'email');
 	$template->set_filenames(array(
-  		'body' => 'email_report.tpl'
+  		'body' => 'report.tpl'
   		));
   $template->display('body');
   
